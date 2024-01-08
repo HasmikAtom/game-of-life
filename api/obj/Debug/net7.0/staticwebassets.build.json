@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "FcTG1wkhG4WwpARO0Th0GHXO2JiwJ2YZXFVs2chUBK8=",
+  "Source": "Herxagon.GameOfLife.Api",
+  "BasePath": "_content/Herxagon.GameOfLife.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

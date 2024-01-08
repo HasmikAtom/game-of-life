@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Herxagon.GameOfLife.Api.props" />
+</Project>
