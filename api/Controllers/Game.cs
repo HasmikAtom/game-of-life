@@ -20,7 +20,8 @@ public class GameController : ControllerBase
         var grid = new Grid
         {
             Length = 12,
-            Width = 12
+            Width = 12,
+            ActiveCells = new string[]{"row-1_cell-3","row-1_cell-4","row-2_cell-3"}
         };
 
         return grid;

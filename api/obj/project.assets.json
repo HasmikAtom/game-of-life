@@ -474,11 +474,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\erza9\\work\\source\\repos\\GameOfLife\\GameOfLifeApi\\Herxagon.GameOfLife.Api.csproj",
+      "projectUniqueName": "C:\\Users\\erza9\\work\\source\\repos\\GameOfLife\\api\\Herxagon.GameOfLife.Api.csproj",
       "projectName": "Herxagon.GameOfLife.Api",
-      "projectPath": "C:\\Users\\erza9\\work\\source\\repos\\GameOfLife\\GameOfLifeApi\\Herxagon.GameOfLife.Api.csproj",
+      "projectPath": "C:\\Users\\erza9\\work\\source\\repos\\GameOfLife\\api\\Herxagon.GameOfLife.Api.csproj",
       "packagesPath": "C:\\Users\\erza9\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\erza9\\work\\source\\repos\\GameOfLife\\GameOfLifeApi\\obj\\",
+      "outputPath": "C:\\Users\\erza9\\work\\source\\repos\\GameOfLife\\api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\erza9\\AppData\\Roaming\\NuGet\\NuGet.Config",

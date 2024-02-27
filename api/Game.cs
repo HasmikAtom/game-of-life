@@ -30,4 +30,5 @@ public class Grid
 {
     public int Length { get; set; }
     public int Width { get; set; }
+    public string[] ActiveCells {get; set; }
 }
