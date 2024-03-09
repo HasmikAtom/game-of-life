@@ -1,29 +1,29 @@
 import React, {useState} from 'react';
 
-interface CellProps {
+type CellProps = {
     id: string
+    alive: boolean
+    activeCells: string[]
+    setActiveCells:  React.Dispatch<React.SetStateAction<string[]>>
 }
 
-export const Cell: React.FC<CellProps> = ({id}: CellProps) => {
-    const [isClicked, setIsClicked] = useState(false);
-    const [activeCells, setActiveCells] = useState<string[]>(["example"])
+export const Cell: React.FC<CellProps> = ({id, activeCells, setActiveCells, alive}: CellProps) => {
+    const [isClicked, setIsClicked] = useState(alive);
+
     const handleClick = () => {
-        console.log("Cell ID", id)
         setIsClicked(!isClicked);
+        if (!isClicked) {
+           setActiveCells([...activeCells, id])
+        } else {
+            setActiveCells(activeCells.filter(cell => cell !== id))
 
-        setActiveCells( // Replace the state
-            [ // with a new array
-                ...activeCells, // that contains all the old items
-                id // and one new item at the end
-            ]
-        );
+        }
 
-        console.log("isClicked", isClicked)
-        console.log(activeCells)
     };
 
-
     return (
+        // <div id={id} className={`cell ${alive ? 'clicked-cell' : ''}`} onClick={handleClick}>
+        // </div>
         <div id={id} className={`cell ${isClicked ? 'clicked-cell' : ''}`} onClick={handleClick}>
         </div>
     );

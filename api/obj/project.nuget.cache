@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "bleln/xGQ9kvBnDUukg+NK9U3lcdvm8VrUciUB+9FWwAoI3kgjE6IaX8c+/ygOYZy77SOv+mI4/ORQjn6l20dA==",
+  "dgSpecHash": "CfPlO8mXW0/9vMgE55S0BOnOH3W2wOdutGyCsoPZah7i6iSJfj2CKpVwBPxmMiRhIF/WXRTIPys3qUdKVE/yvQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\erza9\\work\\source\\repos\\GameOfLife\\GameOfLifeApi\\Herxagon.GameOfLife.Api.csproj",
+  "projectFilePath": "C:\\Users\\erza9\\work\\source\\repos\\GameOfLife\\api\\Herxagon.GameOfLife.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\erza9\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.9\\microsoft.aspnetcore.openapi.7.0.9.nupkg.sha512",
     "C:\\Users\\erza9\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",

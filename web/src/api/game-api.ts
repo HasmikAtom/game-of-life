@@ -13,10 +13,11 @@ export const gameInit = async (grid: Grid) => {
 }
 
 export const fetchGameAPI = async () => {
-    return await axiosClient({
+    const res = await axiosClient({
         method: "get",
         url: "/game"
-    }).then((res) => res.data)
+    })
+    return res.data;
 }
 
 export const sendCellData = async () => {

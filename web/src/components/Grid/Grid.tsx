@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { Button } from "@material-tailwind/react";
 import {Cell} from "./Cell.tsx"
 import {useGrid} from "../../services/game-service.ts";
@@ -6,6 +6,11 @@ import {useMutation} from "@tanstack/react-query";
 import {startGameAPI} from "../../api/game-api.ts";
 
 export const Grid: React.FC = () => {
+    console.log("render")
+    const { data: game, isLoading, isError} = useGrid()
+
+    //replace this withuseMutation
+    const [activeCells, setActiveCells] = useState<string[]>([])
 
     const startGame = useMutation({
         mutationFn: startGameAPI,
@@ -18,18 +23,23 @@ export const Grid: React.FC = () => {
     })
 
 
-    const { data: game, isLoading, isError } = useGrid()
+
+    // cosnt active = useMutation({
+    //
+    // })
+
 
     if (isLoading) return <p>Loading...</p>;
     if (isError) return <p>Error :(</p>;
 
 
-    if (!isLoading) {
 
         const cells = Array.from({ length: game?.length });
-        const rows = Array.from({ length: game?.width });
+        const rows = Array.from({ length: game?.width }); // use memo here
+        const activeC = game.activeCells
+        // setActiveCells(game?.activeCells)
 
-        return (
+    return (
 
             <div style={{ display: 'flex', flexDirection: 'column' }}>
 
@@ -47,11 +57,18 @@ export const Grid: React.FC = () => {
                 {rows.map((_, rowIndex) => (
                     <div key={rowIndex} style={{ display: 'flex' }}>
                         {cells.map((_, cellIndex) => (
-                            <Cell id={`row-${rowIndex}_cell-${cellIndex}`} key={`row-${rowIndex}_cell-${cellIndex}`} />
+                            <Cell
+                                id={`row-${rowIndex}_cell-${cellIndex}`}
+                                key={`row-${rowIndex}_cell-${cellIndex}`}
+                                activeCells={activeCells}
+                                setActiveCells={setActiveCells}
+                                alive={activeC.includes(`row-${rowIndex}_cell-${cellIndex}`)}
+                                // alive={activeCells?.includes(`row-${rowIndex}_cell-${cellIndex}`)}
+                            />
                         ))}
                     </div>
                 ))}
             </div>
         );
-    }
+
 }
